@@ -14,9 +14,10 @@ function add_rsa_id_to_ssh() {
     val=$(echo $1 | tr '[A-Z]' '[a-z]') ## lowercasing input parameter
     if [ $(find ~/.ssh -name \*"$val") ]; then ## pattern matching file name with the given input to see if it exisits in ssh
         file= find ~/.ssh -name \*"$val" -exec basename {} \; ## returns only the base name instead of the full path +name
-        cd ~/.ssh/ && ssh-add $file
+        echo $file
+        cd ~/.ssh/ && ssh-add -D && ssh-add $file  # delete all keys in the agent and add new
     else #file does not exist
-        cd ~/.ssh/ && ssh-add id_rsa #add default ssh id if a secondary is not found.
+        cd ~/.ssh/ && ssh-add -D && ssh-add id_rsa #add default ssh id if a secondary is not found.
     fi
 }
 gswitch
