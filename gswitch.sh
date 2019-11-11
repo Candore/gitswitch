@@ -1,5 +1,12 @@
 #!/bin/sh
 
+#########################
+# usage:  sh gswitch.sh
+#
+# If you have created a secondary gituser info and if you frequently switch 
+# between users, then add `gswitch` to the end of the file, (#31) and execute the following
+# command from command line - `sh gswitch.sh`
+##
 function gswitch() {
 
     tempname=$(git config --global user.name)

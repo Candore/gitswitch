@@ -1,4 +1,14 @@
 #!/bin/sh
+
+#########################
+# usage:  sh init.sh
+#
+# If you are creating a secondary github user keys for the first time, 
+# execute `sh init.sh`. This will prompt you to enter your secondary user info to
+# create ssh private and public keys for the newly created user.
+#
+# Once the key is created, the program automatically switches the secondary user as the default user. 
+##
 source gswitch.sh #Importing file
 source user.sh    #Importing file
 source colors.sh
@@ -11,6 +21,7 @@ function set_secondary() {
     
     echo "add generated key to ssh ssh-add id_rsa$(git config --global secondary.name)"
     echo "copy public key to github ssh settings"
+    gswitch
 }
 
 function init() {
