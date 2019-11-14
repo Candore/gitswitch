@@ -10,6 +10,8 @@ create ssh private and public keys for the newly created user.
 Once the key is created, the program automatically switches the secondary user as the default user. 
 [GitHub Reference](https://scriptingosx.com/2016/05/build-an-application-to-run-a-shell-command-in-xcode-and-swift-part-2)
 
+Remember to copy the generated id_rsa key to your secondary github account's settings.
+
 ### Git Switch
 If you have created a secondary gituser info and if you frequently switch 
 between users, then add `gswitch` to the end of the file, (line #31 on [gswitch](https://github.com/Candore/gitswitch/blob/master/gswitch.sh)) , and execute the following
