@@ -12,7 +12,7 @@ Once the key is created, the program automatically switches the secondary user a
 
 ### Git Switch
 If you have created a secondary gituser info and if you frequently switch 
-between users, then add `gswitch` to the end of the file, (#31) and execute the following
+between users, then add `gswitch` to the end of the file, (line #31 on [gswitch](https://github.com/Candore/gitswitch/blob/master/gswitch.sh)) , and execute the following
 command from command line - `sh gswitch.sh`
 
 ### Support or Contact
